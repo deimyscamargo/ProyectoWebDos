@@ -1,0 +1,29 @@
+.container{
+    width: 450px;
+    background: #06346f;
+    padding: 30px;
+    margin: auto;
+    margin-top: 300px;
+    color: white;
+}
+
+.img{
+    width: 10%;
+    height: 10%;
+}
+
+
+.containerGestionVentas{
+    width: 450px;
+    background: #06346f;
+    padding: 30px;
+    margin: auto;
+    margin-top: 300px;
+    color: white;
+}
+.table th, td{
+    padding-left: center;
+    border:1px solid black;
+   
+
+}

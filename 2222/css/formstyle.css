@@ -1,0 +1,138 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #6495ed;
+}
+
+main {
+    width: 80%;
+    margin: 15px auto 0;
+}
+
+#clientForm input[name="name"] {
+    grid-area: name;
+}
+
+#clientForm input[name="age"] {
+    grid-area: age;
+}
+
+#clientForm input[name="date"] {
+    grid-area: date;
+}
+
+#clientForm input[name="byMethod"] {
+    grid-area: byMethod;
+}
+
+#clientForm input[name="category"] {
+    grid-area: category;
+}
+
+#clientForm input[name="brand"] {
+    grid-area: brand;
+}
+
+#clientForm input[name="carName"] {
+    grid-area: carName;
+}
+
+#clientForm input[name="carYear"] {
+    grid-area: carYear;
+}
+
+#clientForm input[name="quantity"] {
+    grid-area: quantity;
+}
+
+#clientForm input[name="import"] {
+    grid-area: import;
+}
+
+#clientForm input[name="unitValue"] {
+    grid-area: unitValue;
+}
+
+#clientForm input[name="utility"] {
+    grid-area: utility;
+}
+
+#clientForm input[name="totalUtility"] {
+    grid-area: totalUtility;
+}
+
+#clientForm button {
+    grid-area: button;
+}
+
+#clientForm {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+    "name name"
+    "age date"
+    "byMethod category"
+    "brand carName"
+    "carYear quantity"
+    "import unitValue"
+    "utility totalUtility"
+    "button button";
+}
+
+#clientForm * {
+    margin: 7px;
+    padding: 7px;
+    font-size: 1.1rem;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+#clientForm button {
+    outline: none;
+    background-color: #6495ed;
+    color: white;
+    border: 5px sol d transparent;
+    cursor: pointer;
+}
+
+#clientForm input {
+    border: 3px solid #6495ed;
+    outline: none;
+}
+
+#clientForm input:focus {
+    border: 3px solid #367bfa;
+}
+
+#clientForm button:active {
+    border-color: #367bfa;
+}
+
+.clients {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border: 2px solid gray;
+    background-color: #ebebeb;
+    color: #2f2f2f;
+    border-radius: 15px;
+}
+
+.clients div {
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+}
+
+.clients div * {
+    margin: 5px;
+}

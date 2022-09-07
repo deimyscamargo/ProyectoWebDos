@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SoftDJP</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <script src="../js/utilidades2.js"></script>
+    <link rel="stylesheet" href="../css/estilos.css">
+</head>
+
+   
+<body    style="background-image: url(../recursos/imagenes/CarroFondo.jpg); background-repeat: no-repeat; ">
+   
+    <div class="container bg-light"  >
+        <div class="bg-light">
+            <div class="row">
+                <div class="col-4">
+                    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                        <div class="container-fluid">
+                            <a class="navbar-brand" href="#">SoftDJP</a>
+                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                                aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                        </div>
+                    </nav>
+                </div>
+                <div class="col-4">
+                    <div class="col-4 flo" style="margin-left: 100px;">
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-outline-primary dropdown-toggle mt-2" data-bs-toggle="dropdown" aria-expanded="false">
+                            ---Seleccionar---
+                            </button>
+                            <ul class="dropdown-menu">
+                              <li><a class="dropdown-item" href="../html/GestionarVentas.html">Gestionar Ventas</a></li>
+                                
+                            </ul>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="../">Gestionar Clientes</a></li>
+
+                                  
+                              </ul>
+                          </div>
+                    </div>
+                </div>
+                <div class="col-4 flo">
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-secondary dropdown-toggle mt-2" data-bs-toggle="dropdown" aria-expanded="false" style="margin-left:215px;">
+                        usuarioVendedor
+                        </button>
+                        <ul class="dropdown-menu">
+                          <li><a class="dropdown-item" href="#">Cliente virtual </a></li>
+                          <li><a class="dropdown-item" href="#">Another action</a></li>
+                          <li><a class="dropdown-item" href="#">Something else here</a></li>
+                          <li><hr class="dropdown-divider"></li>
+                          <li><a class="dropdown-item" href="index.html">Salir</a></li>
+                        </ul>
+                      </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="container" style="width: 909px; margin-top: 100px;">
+        <div class="card">
+            <div class="card-header">
+                <h5 class="card-title" style="text-align: center;">Listado Ventas</h5>
+
+            </div>
+            <div class="container">
+                <p>Buscar un cliente</p>
+                        <div class="input-group">
+                            <input type="Buscar" class="form-control rounded" placeholder="Ingrese el nombre del cliente" aria-label="Buscar" aria-describedby="Buscar-addon" />
+                            <button type="button" class="btn btn-outline-primary">Buscar</button>
+                          </div>
+                          <br>
+                <div  class="table">
+                    <table>
+                        <tr>
+                         <th style="text-align:center">Fecha venta</th>
+                         <th style="text-align:center">Nombre</th>
+                         <th style="text-align:center">producto</th>
+                         <th style="text-align:center">Medio de pago</th>
+                         <th style="text-align:center">Valor</th>
+                         <th style="text-align:center">Eventos</th>
+                        </tr>
+                        
+                        <tr>
+                            <td style="text-align:center">02/06/2022</td>
+                            <td style="text-align:center">Juan C. Herrera</td>
+                            <td style="text-align:center">Mazda modelo 2022</td>
+                            <td style="text-align:center">PagTarjeta de Credito</td>
+                            <td style="text-align:center">60000000</td>
+                            <td style="text-align:center">&emsp; <a href="../html/GestionarVentas.html""> <img src="../recursos/imagenes/lapiz-png.png" height="40" alt=""></a> &emsp; &emsp;  <a href=""><img  src="../recursos/imagenes/eliminar-png.png" height="40" alt=""></a></td>
+                        </tr>
+                        <tr>
+                            <td style="text-align:center">15/10/2022</td>
+                            <td style="text-align:center">Maria Castañeda </td>
+                            <td style="text-align:center">Camioneta Duster</td>
+                            <td style="text-align:center">Efectivo</td>
+                            <td style="text-align:center">80000000</td>
+                            <td style="text-align:center">&emsp; <a href="../html/GestionarVentas.html"> <img src="../recursos/imagenes/lapiz-png.png" height="40" alt=""></a> &emsp; &emsp;  <a href=""><img  src="../recursos/imagenes/eliminar-png.png" height="40" alt=""></a></td>
+                        
+                        </tr>
+                      </table>
+                    </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+    integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+    crossorigin="anonymous"></script>
+<script src="../js/bootstrap.min.js"></script>
+</body>
+
+</html>

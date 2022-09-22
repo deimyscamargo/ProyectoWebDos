@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SoftDJY</title>
+
+    <!-- <script src="../js/utilidades.js"></script> -->
+    <!-- <script src="../js/ejemplo.js"></script> -->
+    <link rel="stylesheet" href="../docs/css/bootstrap-4.5.2.min.css" type="text/css">
+    <link rel="stylesheet" href="../docs/css/bootstrap-example.min.css" type="text/css">
+    <link rel="stylesheet" href="../docs/css/prettify.min.css" type="text/css">
+    <link rel="stylesheet" href="../docs/css/fontawesome-5.15.1-web/all.css" type="text/css">
+
+    <script type="text/javascript" src="../docs/js/jquery-2.2.4.min.js"></script>
+    <script type="text/javascript" src="../docs/js/bootstrap.bundle-4.5.2.min.js"></script>
+    <script type="text/javascript" src="../docs/js/prettify.min.js"></script>
+
+    <link rel="stylesheet" href="../dist/css/bootstrap-multiselect.css" type="text/css">
+    <script type="text/javascript" src="../dist/js/bootstrap-multiselect.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            window.prettyPrint() && prettyPrint();
+        });
+    </script>
+
+
+</head>
+
+
+<body  >
+
+    <div class="container bg-light">
+        <div class="bg-light">
+            <div class="row">
+                <div class="col-4">
+                    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                        <div class="container-fluid">
+                            <a class="navbar-brand" href="../html/pgprincipaladmin.html">SoftDJY</a>
+                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                                aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                        </div>
+                    </nav>
+                </div>
+                <div class="col-4">
+                    <div class="col-4 flo" style="margin-left: 100px;">
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-outline-primary dropdown-toggle mt-2"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                ---Seleccionar---
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="../html/gestionusuarios.html">Gestión de los usuarios</a>
+                                </li>
+                                <li><a class="dropdown-item" href="../html/gestioncategorias.html">Gestión de categorias </a>
+                                </li>
+                                <li><a class="dropdown-item" href="../html/gestiondelasmaquinas.html">Gestión de las máquinas</a></li>
+                                <li><a class="dropdown-item" href="../html/gestionelementos.html">Gestión de los elementos</a>
+                                </li>
+                                <li><a class="dropdown-item" href="../html/gestiontiposdeservicios.html">Gestión de los tipos de servicios</a></li>
+
+                                <li><a class="dropdown-item" href="../html/gestionservicios.html">Gestión de los servicios</a></li>
+                                <li><a class="dropdown-item" href="../html/gestionfactores.html">Gestión de factores para evolución de los clientes</a></li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4 flo">
+                    <div class="btn-group">
+                        <button type="button" class=" btn btn-outline-primary dropdown-toggle mt-2" data-bs-toggle="dropdown"
+                            aria-expanded="false" style="margin-left:165px;">
+                            usuarioAdministrador
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Cliente virtual </a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="index.html">Salir</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container" style="width: 700px; margin-top: 100px;">
+        <div class="card">
+            <div class="card-header">
+                <h5 class="card-title" style="text-align: center;">Factores que determinan si la evolución es positiva o negativa</h5>
+
+            </div>
+            <div class="card-body">
+                <form class="px-4 py-3">
+                  
+                    <div class="">
+                        <script type="text/javascript">
+                            $(document).ready(function() {
+                                $('#example-getting-started').multiselect({
+                                    enableHTML: true
+                                });
+                            });
+                        </script>
+                        <label for="">Factores:</label><br>
+                        <select id="example-getting-started" multiple="multiple">
+                            <option value="cheese">Factor 1</option>
+                            <option value="tomatoes">Factor 2</option>
+                            <option value="Mozzarella">Factor 3</option>
+                            <option value="Mushrooms">Factor 4</option>
+                            <option value="Pepperoni">Factor 5</option>
+                            <option value="Onions">Factor 6</option>
+                        </select>
+                    </div>
+
+                    <div class="mb-3">
+                        <br><br>
+                        <label for="">¿La evolución es positiva?</label> <br>
+
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                            <label class="form-check-label" for="inlineRadio1">Si</label>
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                            <label class="form-check-label" for="inlineRadio2">No</label>
+                          </div>
+                    </div>
+                    <div class="container-fluid h-100"> 
+                        <div class="row w-100 align-items-center">
+                            <div class="col text-center">
+                                <button class="btn btn-success regular-button"> Guardar </button>
+                            </div>	
+                        </div>
+                    </div>
+                    <br><br>
+                
+                </form>
+                <br>
+              
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+        crossorigin="anonymous"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <!-- <script src="../js/dinamico.js"></script> -->
+
+    
+</body>
+
+</html>

@@ -36,6 +36,7 @@ function addInput(){
  
 
     const costo = document.createElement("input");
+    costo.disabled = true;
     costo.type="number";
     costo.placeholder="$";
 
@@ -92,6 +93,7 @@ function addInput2(){
  
 
     const costo = document.createElement("input");
+    costo.disabled = true;
     costo.type="number";
     costo.placeholder="$";
 

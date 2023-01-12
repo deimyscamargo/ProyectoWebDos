@@ -335,5 +335,5 @@ function addInput3(){
     flex.appendChild(btn);
 }
 
-addBtn3.addEventListener("click", addInput3);
+// addBtn3.addEventListener("click", addInput3);
 

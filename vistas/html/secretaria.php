@@ -1,3 +1,11 @@
+<?php
+session_start();
+if (!isset($_SESSION['usuario'])) {
+    header('Location: login.html');
+}
+?>
+
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -18,7 +26,7 @@
                 <div class="col-4">
                     <nav class="navbar navbar-expand-lg navbar-light bg-light">
                         <div class="container-fluid">
-                            <a class="navbar-brand" href="#">SoftDJP</a>
+                            <a class="navbar-brand" href="../html/secretaria.php">SoftDJP</a>
                             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                                 aria-expanded="false" aria-label="Toggle navigation">
@@ -34,9 +42,9 @@
                             ---Seleccionar---
                             </button>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="../html/gestionarhistorialclinico.html">Gestionar el historial clínico</a></li>  
-                                <li><a class="dropdown-item" href="../html/recordatoriocitas.html">Recordatorio de las citas</a></li>
-                                <li><a class="dropdown-item" href="../html/factura.html">Factura</a></li>
+                              <li><a class="dropdown-item" href="../html/gestionarhistorialclinico.php">Gestionar el historial clínico</a></li>  
+                              <li><a class="dropdown-item" href="../html/recordatoriocitas.php">Recordatorio de las citas</a></li>
+                              <li><a class="dropdown-item" href="../html/factura.php">Factura</a></li>
                             </ul>
                           </div>
                     </div>
@@ -45,7 +53,7 @@
                     <div class="col-4 flo" style="margin-left: 170px;">
                         <div class="btn-group">
                             <button type="button" class="btn btn-outline-primary dropdown-toggle mt-2" data-bs-toggle="dropdown" aria-expanded="false">
-                            usuarioSecretaria
+                            UsuarioSecretaria
                             </button>
                             <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="#">Another action</a></li>
@@ -58,31 +66,7 @@
             </div>
         </div>
     </div>
-    <div class="container" style="width: 600px; margin-top: 60px;">
-        <div class="card">
-            <div class="card-header">
-                <h5 class="card-title" style="text-align: center;">Recordatorio de cita por SMS</h5>
 
-            </div> <br>
-            <div class="container text-center">
-                <div class="row">
-                  <div class="col">
-                        <form action=""  >
-                            <label for="" >Remitente</label>
-                            <input class="form-control" type="text" aria-label="default input example" style="width: 310px; margin-top: 15px; margin-left: 100px;" >
-                            <textarea class="form-control" aria-label="default input example" style=" margin-top: 15px;" cols="30" rows="5"></textarea>
-                            <input type="submit" value="Enviar">
-
-                        </form>
-                  </div>
-                </div> 
-            </div> 
-
-
-        </div> 
-    </div> <br>
-
-    
 
 
     <!---script de bootstrap-->
@@ -90,9 +74,5 @@
     integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
     crossorigin="anonymous"></script>
     <script src="../js/bootstrap.min.js"></script>
-
-    
-
-
 </body>
 </html>

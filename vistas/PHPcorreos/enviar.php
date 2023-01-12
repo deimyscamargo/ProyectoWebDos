@@ -1,3 +1,52 @@
+<?php
+
+require_once("PHPMailer/clsMail.php");
+
+
+
+$message = '';
+
+$mailSend = new clsMail();
+
+$titulo ='Signup | Verification';
+$correo =$email;
+$asunto ='verificar si se envia el correo';
+$bodyHTML ='
+!Gracias por registrarte!
+<br>
+<br>
+
+Tu cuenta ha sido creada, activala utilizando el enlace de la parte inferior.
+<br>
+<br>
+
+------------------------ <br>
+id: '.$_idusuario_.'<br>
+Username: '.$_nickname_.' <br>
+Password: '.$_password_us.'<br>
+------------------------<br><br>
+
+Por favor haz clic en este enlace para activar tu cuenta: <br>
+
+http://localhost/ProyectoWebDos/ProyectoWebDos/vistas/PHPcorreos/PHPMailer/activar.php?email='.$email.'?hash='.$hash.'';
+
+$enviado = $mailSend ->metEnviar($titulo, $correo ,$asunto,$bodyHTML);
+
+
+
+if($enviado.$stmt->execute()){
+    $message ='Successful';
+    
+    header('Location: ../html/gestionarhistorialclinico.php'); // En caso de que sea satisfactorio el proceso, se redirige al formulario de Login
+} else {
+    $message = 'Ups :( Algo salió mal';
+    
+
+}   
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -34,8 +83,8 @@
                             ---Seleccionar---
                             </button>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="../html/gestionarhistorialclinico.html">Gestionar el historial clínico</a></li>  
-                                <li><a class="dropdown-item" href="../html/recordatoriocitas.html">Recordatorio de las citas</a></li>
+                                <li><a class="dropdown-item" href="../html/gestionarhistorialclinico.php">Gestionar el historial clínico</a></li>  
+                                <li><a class="dropdown-item" href="../html/recordatoriocitas.php">Recordatorio de las citas</a></li>
                                 <li><a class="dropdown-item" href="../html/factura.html">Factura</a></li>
                             </ul>
                           </div>
@@ -50,7 +99,7 @@
                             <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="#">Another action</a></li>
                             <li><hr class="dropdown-divider"></li>
-                            <li><a class="dropdown-item" href="index.php">Salir</a></li>
+                            <li><a class="dropdown-item" href="index.html">Salir</a></li>
                             </ul>
                        </div>
                    </div>
@@ -58,31 +107,52 @@
             </div>
         </div>
     </div>
-    <div class="container" style="width: 600px; margin-top: 60px;">
+    <div class="container" style="width: 99999999999999999px; margin-top: 60px;">
         <div class="card">
             <div class="card-header">
-                <h5 class="card-title" style="text-align: center;">Recordatorio de cita por SMS</h5>
+                <h5 class="card-title" style="text-align: center;">validacion</h5>
 
             </div> <br>
-            <div class="container text-center">
-                <div class="row">
-                  <div class="col">
-                        <form action=""  >
-                            <label for="" >Remitente</label>
-                            <input class="form-control" type="text" aria-label="default input example" style="width: 310px; margin-top: 15px; margin-left: 100px;" >
-                            <textarea class="form-control" aria-label="default input example" style=" margin-top: 15px;" cols="30" rows="5"></textarea>
-                            <input type="submit" value="Enviar">
+            <main class="main">
 
-                        </form>
-                  </div>
-                </div> 
-            </div> 
+        <div class="signup-box">
+
+            <?php if(!empty($message)): ?>
+                    <p><?= $message ?></p>
+            <?php endif; ?>
+            <h2>Regístrate</h2>
+
+            <form action="enviar.php" method="post" onsubmit="return validarsign();">
+                <LABEL for="id">id del usuario</LABEL>
+				<input id="id" type="text" name="idusuario" placeholder="Ingresa el id" required autofocus> <br>
+				<!--USERNAME-->
+				<LABEL for="_nickname_">Nombre de usuario</LABEL>
+				<input id="_nickname_" type="text" name="nombreUsuario" placeholder="Ingresa un apodo (max. 10 caracteres)" required > <br>
+				<!--EMAIL-->
+				<LABEL for="correo">Correo electrónico</LABEL>
+				<input id="correo" type="text" name="email" placeholder="Ingresa el correo eléctrico" required> <br>
+				<!--PASSWORD-->
+				<LABEL for="pssword">Contraseña</LABEL>
+				<input id="pssword" type="password" name="contrasena" placeholder="Ingresa contraseña" required> <br>
+				<!--PASSWORD CONFIRMATION-->
+				<LABEL for="tio">tipo de usuario</LABEL>
+				<input id="tipo" type="text" name="tipoUsuario" placeholder="Ingresa el tipo de Usuario" required> <br>
+	
+                <input type="submit" name="aceptar_" value="Registrar">
+            </form>
+            <div class="existente">
+                <span>¿Ya tienes una cuenta? <a href="login.php">Ingresar ahora</a></span>
+            </div>
+            
+		</div>
+
+    </main>
+            
 
 
         </div> 
     </div> <br>
 
-    
 
 
     <!---script de bootstrap-->
@@ -93,6 +163,17 @@
 
     
 
-
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="../scripts.js"></script>
 </body>
 </html>
+
+
+
+
+
+
+    
+    
+
+

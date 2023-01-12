@@ -8,12 +8,11 @@
     <title>SoftDJY</title>
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     <script src="../js/utilidades2.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.8.0/chart.min.js"></script>
 
 </head>
 
    
-<body    style="background-image: url(../recursos/imagenes/fondo.jpeg); background-repeat: no-repeat center center fixed; background-size: cover; ">
+<body    style="background-image: url(../recursos/imagenes/fondo.jpeg); background-repeat: no-repeat center center fixed; background-size: cover;">
    
     <div class="container bg-light"  >
         <div class="bg-light">
@@ -37,7 +36,8 @@
                             ---Seleccionar---
                             </button>
                             <ul class="dropdown-menu">
-                              <li><a class="dropdown-item" href="../html/Agendamientocitas.php">Agendamiento de citas </a></li>  
+                              <li><a class="dropdown-item" href="../html/Seguimientoevolutivo.html">Evolucion del tratamiento</a></li>
+                              <li><a class="dropdown-item" href="../html/Agendamientocitas.php">Agendammiento de citas</a></li>  
                             </ul>
                           </div>
                     </div>
@@ -60,68 +60,11 @@
             </div>
         </div>
     </div>
-
-    <div class="container" style="width: 700px; margin-top: 100px;">
-        <div class="card">
-            <div class="card-header">
-                <h5 class="card-title" style="text-align: center;">Evolución del tratamiento</h5>
-
-            </div>
-            <div class="container">
-            <div>
-                 <label for="">Nombre del cliente</label>
-                <input type="text" name="" id="" >
-                        </div><br>
-            <div>
-                <label for="">Tipo de servicio</label>
-               <select name="" id="">
-                <option value="">select</option>
-               </select>
-                        </div><br>
-            <div>
-                 <label for="">Descripción del servicio</label><br>
-                    <textarea name="" id="" cols="20" rows="2"></textarea>
-                        </div><br>
-             <div>
-                 <label for="">Número de la sesion actual</label>
-                <input type="number" name="" id="" >
-                        </div><br>
-             <div>
-                 <label for="">Número de sesiones faltantes</label>
-                <input type="number" name="" id="" >
-                        </div><br>
-             <div class="card container">
-                          <div class="mb-3">
-                      
-                              <div class="row">
-                                  <div class="col-sm-6">
-                                      <h5 style="text-align:center;">Evolución del tratamiento (positivo o negativo)</h5><br>
-                                      <div style="width: 400px; ">
-                                          <canvas id="grafica"></canvas>
-                                      </div>
-                                      
-                                  </div>
-                                
-                      
-                              </div>
-                          </div>
-                      
-                      </div>
-
-         
-            
     
-
-            </div>
-        </div>
-    </div>
-    <br><br>
-
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
         integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
         crossorigin="anonymous"></script>
     <script src="../js/bootstrap.min.js"></script>
-    <script src="../js/Gestionarcliente.js"></script>
 </body>
 
 </html>
